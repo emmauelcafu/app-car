@@ -1,11 +1,12 @@
 const { Router } = require("express");
-const { carHandler,userdataHandler } = require("../handler/carHandler");
+const { carHandler, userdataHandler } = require("../handler/carHandler");
 const { postCarHandler } = require("../handler/postCarHandler");
+const { validacionToken } = require("../middleware/token");
 const carRouter = Router();
 
-carRouter.get("/", carHandler);
-carRouter.get("/userdate", userdataHandler);
+carRouter.get("/", validacionToken, carHandler);
+carRouter.get("/userdate", validacionToken, userdataHandler);
 
-carRouter.post("/", postCarHandler);
+carRouter.post("/", validacionToken, postCarHandler);
 
 module.exports = carRouter;

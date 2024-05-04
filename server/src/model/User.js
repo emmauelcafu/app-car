@@ -19,6 +19,7 @@ User.init(
     telFijo: { type: DataTypes.STRING },
     cedulaTitular: { type: DataTypes.STRING },
     img: { type: DataTypes.STRING },
+    
   },
   {
     sequelize,
