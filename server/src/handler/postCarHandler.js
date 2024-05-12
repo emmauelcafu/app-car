@@ -1,9 +1,9 @@
-const User  = require('../model/User');
+const User = require('../model/User');
 const { createCar } = require('../controller/carController');
-
+const { validacionToken } = require('../middleware/token'); // Importa el middleware de validación del token
 
 const postCarHandler = async (req, res) => {
- 
+  console.log(req);
     const { nombre, apellido, cedula, correo, telFijo, cedulaTitular, img, placa } = req.body;
     console.log(nombre, apellido, cedula, correo, telFijo, cedulaTitular, img, placa)
 
