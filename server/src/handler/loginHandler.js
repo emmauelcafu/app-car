@@ -62,8 +62,6 @@ const datoHandler = (req, res) => {
 };
 
 
-const deslogin = (rer,res)=>{
-  
-}
+
 
 module.exports = { loginHandler, registrarHandler, datoHandler, llavesecreta:llavesecreta};
